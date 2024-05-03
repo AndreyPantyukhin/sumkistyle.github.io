@@ -46,11 +46,13 @@
 h1{
     font-family: 'NeutralFace'; 
     font-size: clamp(48px, 6vw, 128px);
+    font-weight: 400;
 }
 h2{
     font-family: 'NeutralFace'; 
-    font-size: clamp(32px, 3vw, 64px);
+    font-size: clamp(32px, 2vw, 64px);
     margin-bottom: 48px;
+    font-weight: 400;
 }
 h3{ /*УТОЧНИТЬ РАЗМЕР МОБИЛКИ*/
     font-family: 'NeutralFace'; 
@@ -296,6 +298,7 @@ section{
 .advantage-item{
     gap: 24px;
     width: calc(25% - 33px);
+    align-items: center;
 }
 .advantage-img{
     width: 96px;
@@ -353,11 +356,20 @@ section{
 }
 .product-img{
     width: 100%;
-    height: max-content;
+    height: 50vh;
     margin-bottom: 21px;
+}
+.product-img img{
+    object-fit: contain;
 }
 .product-name-price{
     justify-content: space-between;
+}
+.product-name-price p{
+    width: 45%;
+}
+.product-name-price p:last-child{
+    text-align: end;
 }
 /*Посмотреть еще*/
 .product-add-box{
@@ -392,7 +404,6 @@ section{
 .popular-brands-item{
     width: calc(16.6% - 8px);
     gap: 8px;
-    padding: 136px 0;
     background-color: var(--gray);
     border-radius: 8px;
 }
@@ -442,6 +453,7 @@ section{
 }
 .questions-item p{
     width: 50%;
+    margin-bottom: 0;
 }
 .plus-icon{
     width: 64px;
@@ -686,8 +698,10 @@ section{
 }
 .shop-plus-minus-img{
     border-radius: 8px;
-    width: 48px;
-    height: 48px;
+    background-color: var(--gray);
+    width: 32px;
+    height: 32px;
+    padding: 16px;
 }
 .shop-price-box{
     gap: 0px;
@@ -755,6 +769,8 @@ section{
 }
 .drop-down-head{
     font-size: 20px;
+    align-items: center;
+    gap: 24px;
 }
 .drop-down-text{
     padding-top: 16px;
@@ -764,12 +780,6 @@ details>summary {
 }
 summary::-webkit-details-marker {
     display: none
-}
-summary::after {
-    content: '  \02C4';
-}
-details[open] summary:after {
-    content: '  \02C5';
 }
 .order-check-box{
     gap: 20px;
@@ -788,11 +798,16 @@ details[open] summary:after {
 }
 .order-result-box>p{
     margin-bottom: 48px;
+    justify-content: space-between;
 }
 .order-result-img{
-    width: calc(5.81vw - 8px);
+    width: calc(17% - 8px)!important;
     height: calc(5.81vw - 8px);
     border-radius: 8px;
+}
+.order-result-img img{
+    object-fit: contain;
+    background-color: var(--gray);
 }
 .order-check-box-persanal{
     margin: 24px 0;
@@ -1011,6 +1026,7 @@ details[open] summary:after {
 .detail-copy-img{
     width: 32px;
     height: 32px;
+    margin-left: 8px;
 }
 .detail-text-box>div>div{
     align-items: center;
